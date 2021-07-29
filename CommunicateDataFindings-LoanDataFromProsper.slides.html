@@ -13222,17 +13222,9 @@ $(document).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Communicating-Data-Finding-for-Loan-Data-From-Prosper-dataset">Communicating Data Finding for Loan Data From Prosper dataset<a class="anchor-link" href="#Communicating-Data-Finding-for-Loan-Data-From-Prosper-dataset">&#182;</a></h1><h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>The dataset is available in <a href="https://s3.amazonaws.com/udacity-hosted-downloads/ud651/prosperLoanData.csv">https://s3.amazonaws.com/udacity-hosted-downloads/ud651/prosperLoanData.csv</a>.</p>
+<h1 id="Communicate--Prosper-Loan-Dataset-Findings">Communicate  Prosper Loan Dataset Findings<a class="anchor-link" href="#Communicate--Prosper-Loan-Dataset-Findings">&#182;</a></h1><h2 id="Preliminary-Wrangling">Preliminary Wrangling<a class="anchor-link" href="#Preliminary-Wrangling">&#182;</a></h2><p>The dataset is available in <a href="https://s3.amazonaws.com/udacity-hosted-downloads/ud651/prosperLoanData.csv">https://s3.amazonaws.com/udacity-hosted-downloads/ud651/prosperLoanData.csv</a>.</p>
 <p>This data set contains 113,937 loans with 81 variables on each loan, including loan amount, borrower rate (or interest ate),
 current loan status, borrower income, and many others.</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Wrangling">Data Wrangling<a class="anchor-link" href="#Data-Wrangling">&#182;</a></h2><p><strong>Sample records of the dataset</strong></p>
 
 </div>
 </div>
@@ -13240,7 +13232,7 @@ current loan status, borrower income, and many others.</p>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;prosperLoanData.csv&#39;</span><span class="p">)</span>
@@ -13259,7 +13251,7 @@ current loan status, borrower income, and many others.</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -13441,7 +13433,7 @@ current loan status, borrower income, and many others.</p>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -13562,7 +13554,7 @@ memory usage: 68.1+ MB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="What-is-the-dataset-structure?">What is the dataset structure?<a class="anchor-link" href="#What-is-the-dataset-structure?">&#182;</a></h3><p>The dataset has 113,937 records with 81 column. you can find the details of each column given in the dataset in the link 
+<h3 id="What-is-the-structure-of-your-dataset?">What is the structure of your dataset?<a class="anchor-link" href="#What-is-the-structure-of-your-dataset?">&#182;</a></h3><p>The dataset has 113,937 records with 81 column. you can find the details of each column given in the dataset in the link 
 <a href="https://docs.google.com/spreadsheets/d/1gDyi_L4UvIrLTEC6Wri5nbaMmkGmLQBk-Yx3z0XDEtI/edit#gid=0">https://docs.google.com/spreadsheets/d/1gDyi_L4UvIrLTEC6Wri5nbaMmkGmLQBk-Yx3z0XDEtI/edit#gid=0</a></p>
 <p><strong>Note:</strong> the data field ListingCategory was enhanced to contain the description value for the numeric value in ListingCategory (numeric)</p>
 
@@ -13572,7 +13564,25 @@ memory usage: 68.1+ MB
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="What-are-the-main-interesting-features-in-the-dataset?">What are the main interesting features in the dataset?<a class="anchor-link" href="#What-are-the-main-interesting-features-in-the-dataset?">&#182;</a></h3><p>I am interested in investigate the parameters</p>
+<h3 id="What-is/are-the-main-feature(s)-of-interest-in-your-dataset?">What is/are the main feature(s) of interest in your dataset?<a class="anchor-link" href="#What-is/are-the-main-feature(s)-of-interest-in-your-dataset?">&#182;</a></h3><p>I am interested in investigate the features</p>
+<blockquote><ul>
+<li>The length of the loan</li>
+<li>The Lender yield on the loan</li>
+<li>The Effective yield</li>
+<li>The Estimated loss</li>
+<li>The estimated return assigned to the listing at the time it was created. </li>
+<li>The category of the listing that the borrower selected when posting their listing</li>
+<li>The current status of the loan</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="What-features-in-the-dataset-do-you-think-will-help-support-your-investigation-into-your-feature(s)-of-interest?">What features in the dataset do you think will help support your investigation into your feature(s) of interest?<a class="anchor-link" href="#What-features-in-the-dataset-do-you-think-will-help-support-your-investigation-into-your-feature(s)-of-interest?">&#182;</a></h3><p>Below features will help me in the investigation</p>
 <blockquote><ul>
 <li>Term: The length of the loan expressed in months.</li>
 <li>LenderYield: The Lender yield on the loan. Lender yield is equal to the interest rate on the loan less the servicing fee.</li>
@@ -13606,7 +13616,7 @@ memory usage: 68.1+ MB
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Term</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -13624,7 +13634,7 @@ memory usage: 68.1+ MB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -13645,7 +13655,7 @@ Name: Term, dtype: int64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The length of the loan expressed in months.</span>
@@ -13664,7 +13674,7 @@ Name: Term, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -13702,7 +13712,7 @@ Name: Term, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Term&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">default_color</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;The length of the loan expressed in months&#39;</span><span class="p">);</span>
@@ -13740,7 +13750,7 @@ Name: Term, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Term&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;The length of the loan expressed in months&#39;</span><span class="p">);</span>
@@ -13787,7 +13797,7 @@ Name: Term, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;Term&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;The length of the loan expressed in months&#39;</span><span class="p">);</span>
@@ -13847,7 +13857,7 @@ Name: Term, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LoanStatus</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -13865,7 +13875,7 @@ Name: Term, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -13895,7 +13905,7 @@ Name: LoanStatus, dtype: int64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;LoanStatus&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">default_color</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;The current status of the loan&#39;</span><span class="p">);</span>
@@ -13956,7 +13966,7 @@ Name: LoanStatus, dtype: int64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">IsBorrowerHomeowner</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -13974,7 +13984,7 @@ Name: LoanStatus, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[48]:</div>
 
 
 
@@ -13994,7 +14004,7 @@ Name: IsBorrowerHomeowner, dtype: int64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;IsBorrowerHomeowner&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">default_color</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;A Borrower is classified as a homowner&#39;</span><span class="p">);</span>
@@ -14056,7 +14066,7 @@ Name: IsBorrowerHomeowner, dtype: int64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ListingCategory&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ListingCategory (numeric)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;Not Available&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Debt Consolidation&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Home Improvement&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="s1">&#39;Business&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="s1">&#39;Personal Loan&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span><span class="s1">&#39;Student Use&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">:</span><span class="s1">&#39;Auto&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">:</span><span class="s1">&#39;Other&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">:</span><span class="s1">&#39;Baby&amp;Adoption&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span><span class="s1">&#39;Boat&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span><span class="s1">&#39;Cosmetic Procedure&#39;</span><span class="p">,</span> <span class="mi">11</span><span class="p">:</span><span class="s1">&#39;Engagement Ring&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">:</span><span class="s1">&#39;Green Loans&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">:</span><span class="s1">&#39;Household Expenses&#39;</span><span class="p">,</span> <span class="mi">14</span><span class="p">:</span><span class="s1">&#39;Large Purchases&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">:</span><span class="s1">&#39;Medical/Dental&#39;</span><span class="p">,</span> <span class="mi">16</span><span class="p">:</span><span class="s1">&#39;Motorcycle&#39;</span><span class="p">,</span> <span class="mi">17</span><span class="p">:</span><span class="s1">&#39;RV&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">:</span><span class="s1">&#39;Taxes&#39;</span><span class="p">,</span> <span class="mi">19</span><span class="p">:</span><span class="s1">&#39;Vacation&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">:</span><span class="s1">&#39;Wedding Loans&#39;</span><span class="p">})</span>
@@ -14072,7 +14082,7 @@ Name: IsBorrowerHomeowner, dtype: int64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ListingCategory&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -14090,7 +14100,7 @@ Name: IsBorrowerHomeowner, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[52]:</div>
 
 
 
@@ -14129,7 +14139,7 @@ Name: ListingCategory, dtype: int64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;ListingCategory&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">default_color</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;The listing category selected by borrower&#39;</span><span class="p">);</span>
@@ -14190,7 +14200,7 @@ Name: ListingCategory, dtype: int64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">LenderYield</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -14208,7 +14218,7 @@ Name: ListingCategory, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[54]:</div>
 
 
 
@@ -14234,7 +14244,7 @@ Name: LenderYield, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;LenderYield&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Lender yield on the loan&#39;</span><span class="p">);</span>
@@ -14272,7 +14282,7 @@ Name: LenderYield, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;LenderYield&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Lender yield on the loan&#39;</span><span class="p">);</span>
@@ -14321,7 +14331,7 @@ Name: LenderYield, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">binsize</span> <span class="o">=</span> <span class="mf">0.05</span>
@@ -14385,7 +14395,7 @@ Name: LenderYield, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_after200907</span><span class="o">.</span><span class="n">EstimatedEffectiveYield</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -14403,7 +14413,7 @@ Name: LenderYield, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[60]:</div>
 
 
 
@@ -14429,7 +14439,7 @@ Name: EstimatedEffectiveYield, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df_after200907</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;EstimatedEffectiveYield&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Estimated Effective Yield&#39;</span><span class="p">);</span>
@@ -14467,7 +14477,7 @@ Name: EstimatedEffectiveYield, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df_after200907</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;EstimatedEffectiveYield&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Estimated Effective Yield&#39;</span><span class="p">);</span>
@@ -14516,7 +14526,7 @@ Name: EstimatedEffectiveYield, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">binsize</span> <span class="o">=</span> <span class="mf">0.05</span>
@@ -14580,7 +14590,7 @@ Name: EstimatedEffectiveYield, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_after200907</span><span class="o">.</span><span class="n">EstimatedLoss</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -14598,7 +14608,7 @@ Name: EstimatedEffectiveYield, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[35]:</div>
+    <div class="prompt output_prompt">Out[65]:</div>
 
 
 
@@ -14624,7 +14634,7 @@ Name: EstimatedLoss, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df_after200907</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;EstimatedLoss&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Estimated principal loss on charge-offs&#39;</span><span class="p">);</span>
@@ -14673,7 +14683,7 @@ Name: EstimatedLoss, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df_after200907</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;EstimatedLoss&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Estimated principal loss on charge-offs&#39;</span><span class="p">);</span>
@@ -14722,7 +14732,7 @@ Name: EstimatedLoss, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">binsize</span> <span class="o">=</span> <span class="mf">0.02</span>
@@ -14786,7 +14796,7 @@ Name: EstimatedLoss, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_after200907</span><span class="o">.</span><span class="n">EstimatedReturn</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -14804,7 +14814,7 @@ Name: EstimatedLoss, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[39]:</div>
+    <div class="prompt output_prompt">Out[70]:</div>
 
 
 
@@ -14830,7 +14840,7 @@ Name: EstimatedReturn, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df_after200907</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;EstimatedReturn&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Estimated Return&#39;</span><span class="p">);</span>
@@ -14879,7 +14889,7 @@ Name: EstimatedReturn, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sb</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df_after200907</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;EstimatedReturn&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Estimated Return&#39;</span><span class="p">);</span>
@@ -14917,7 +14927,7 @@ Name: EstimatedReturn, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">binsize</span> <span class="o">=</span> <span class="mf">0.02</span>
@@ -14978,7 +14988,7 @@ Name: EstimatedReturn, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># correlation plot</span>
@@ -14998,7 +15008,7 @@ Name: EstimatedReturn, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[45]:</div>
+    <div class="prompt output_prompt">Out[75]:</div>
 
 
 
@@ -15043,7 +15053,7 @@ Name: EstimatedReturn, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">]);</span>
@@ -15096,7 +15106,7 @@ Name: EstimatedReturn, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">]);</span>
@@ -15148,7 +15158,7 @@ Name: EstimatedReturn, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">]);</span>
@@ -15200,7 +15210,7 @@ Name: EstimatedReturn, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">]);</span>
@@ -15261,7 +15271,7 @@ Name: EstimatedReturn, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">sb</span><span class="o">.</span><span class="n">FacetGrid</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df_after200907</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="s1">&#39;LoanStatus&#39;</span><span class="p">,</span> <span class="n">col_wrap</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">3</span><span class="p">);</span>
@@ -15314,7 +15324,7 @@ Name: EstimatedReturn, dtype: float64</pre>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input_hidden">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">sb</span><span class="o">.</span><span class="n">FacetGrid</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df_after200907</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="s1">&#39;ListingCategory&#39;</span><span class="p">,</span> <span class="n">col_wrap</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
@@ -15358,6 +15368,18 @@ Name: EstimatedReturn, dtype: float64</pre>
 <blockquote><p>from the above plot you can find that</p>
 <ul>
 <li>Loans with Listing Category Home Improvement , Debit Consolidation, Other, Auto, Business, students Use have higher estimated return and estimated loss </li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Were-there-any-interesting-or-surprising-interactions-between-features?">Were there any interesting or surprising interactions between features?<a class="anchor-link" href="#Were-there-any-interesting-or-surprising-interactions-between-features?">&#182;</a></h3><blockquote><ul>
+<li>Some of the data features were not supported before July 2009, which leading to neglect the data before that date during our investigation</li>
+<li>The home owner flag didn't impact the investigation result</li>
 </ul>
 </blockquote>
 

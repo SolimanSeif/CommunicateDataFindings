@@ -1,4 +1,4 @@
-# Data Analysis and Visualization Report for Loan Data From Prosper dataset
+# Prosper Loan dataset analysis and visualization
 ## by Soliman Seif
 
 
